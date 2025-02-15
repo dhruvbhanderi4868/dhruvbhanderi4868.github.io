@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.construction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.construction-sign {
+    background-color: #ffeb3b;
+    border: 3px solid #f9a825;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    transform-origin: top;
+    animation: swing 3s ease-in-out infinite;
+}
+
+.construction-sign p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.construction-sign span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+@keyframes swing {
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+}
