@@ -5,176 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presco Appointment Booking</title>
     <link rel="shortcut icon" href="./assets/images/logo_d.ico" type="image/x-icon">
-    <style>
-        /* Reset body and ensure full height */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Main wrapper to push footer to bottom */
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Ensure main content expands */
-        .container {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        /* Header with app icon */
-        header {
-            background-color: #1a1a1a;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid #FFD700;
-        }
-
-        .app-logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .app-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFD700;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 280px;
-            background: #161616;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .content {
-            flex: 2;
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Lightbox (Full Screen Image Preview) */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Footer always at bottom */
-        footer {
-            background-color: #161616;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            border-top: 2px solid #FFD700;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                padding: 10px;
-            }
-            .sidebar, .content {
-                width: 100%;
-                margin: 0;
-            }
-            .app-logo {
-                width: 30px;
-                height: 30px;
-            }
-            .app-title {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/shared.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="wrapper">
     <header>
-        <img src="./assets/images/presco/icon.png" alt="App Logo" class="app-logo"> <!-- App Icon -->
-        <span class="app-title">Presco Appointment Booking</span>
+        <div class="header-content">
+            <img src="./assets/images/presco/icon.png" alt="App Logo" class="app-logo">
+            <span class="app-title">Presco Appointment Booking</span>
+        </div>
     </header>
 
-    <div class="container">
+    <div class="main-content">
         <div class="sidebar">
-            <h2 style="color: #FFD700;">App Overview</h2>
-            <p><strong>Presco Appointment Booking</strong> simplifies booking medical appointments and conducting virtual consultations. With features like video calls and easy access to prescriptions, Presco allows users to connect with doctors from the comfort of their homes.</p>
+            <h2 class="h2">App Overview</h2>
+            <div class="card">
+                <p><strong>Presco Appointment Booking</strong> simplifies booking medical appointments and conducting virtual consultations. With features like video calls and easy access to prescriptions, Presco allows users to connect with doctors from the comfort of their homes.</p>
+            </div>
         </div>
         
         <div class="content">
-            <h2>Key Features</h2>
-            <ul>
-                <li><strong>Online Appointment Booking:</strong> Browse and book available slots with doctors.</li>
-                <li><strong>Virtual Consultations:</strong> Enjoy real-time video calls with doctors.</li>
-                <li><strong>Prescription & Information Sharing:</strong> Get prescriptions and medical advice after consultations.</li>
-                <li><strong>Real-Time Notifications:</strong> Never miss an appointment with timely reminders.</li>
-                <li><strong>User-Friendly Interface:</strong> Intuitive design for easy navigation.</li>
+            <h2 class="h2">Key Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Online Appointment Booking:</h3>
+                        <p>Browse and book available slots with doctors.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Virtual Consultations:</h3>
+                        <p>Enjoy real-time video calls with doctors.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Prescription & Information Sharing:</h3>
+                        <p>Get prescriptions and medical advice after consultations.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Real-Time Notifications:</h3>
+                        <p>Never miss an appointment with timely reminders.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">User-Friendly Interface:</h3>
+                        <p>Intuitive design for easy navigation.</p>
+                    </div>
+                </li>
             </ul>
 
-            <h2 style="color: #FFD700;">App Screenshots</h2>
+            <h2 class="h2">App Screenshots</h2>
             <div class="image-gallery">
                 <img src="assets/images/presco/01.homescreen.png" alt="Home Screen" onclick="openLightbox(this)">
                 <img src="assets/images/presco/02.ipdopdscreen.png" alt="IPD OPD Screen" onclick="openLightbox(this)">
@@ -193,22 +80,24 @@
     <footer>© 2025 Presco Appointment Booking. All Rights Reserved.</footer>
 </div>
 
-<!-- Lightbox (Full-Screen Image Preview) -->
+<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="">
+    <button class="nav-btn prev" onclick="changeImage(-1)">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+    </button>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Enlarged screenshot">
+    </div>
+    <button class="nav-btn next" onclick="changeImage(1)">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+    </button>
 </div>
 
-<script>
-    function openLightbox(img) {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-</script>
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/lightbox.js"></script>
 
 </body>
 </html>

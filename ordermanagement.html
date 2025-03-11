@@ -5,144 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Management - Personal Use</title>
     <link rel="shortcut icon" href="./assets/images/logo_d.ico" type="image/x-icon">
-    <style>
-        /* Reset body and ensure full height */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Main wrapper to push footer to bottom */
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Ensure main content expands */
-        .container {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        /* Header with app icon */
-        header {
-            background-color: #1a1a1a;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid #FFD700;
-        }
-
-        .app-logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .app-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFD700;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 280px;
-            background: #161616;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .content {
-            flex: 2;
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Footer always at bottom */
-        footer {
-            background-color: #161616;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            border-top: 2px solid #FFD700;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                padding: 10px;
-            }
-            .sidebar, .content {
-                width: 100%;
-                margin: 0;
-            }
-            .app-logo {
-                width: 30px;
-                height: 30px;
-            }
-            .app-title {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/shared.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="wrapper">
     <header>
-        <img src="./assets/images/logo_d.ico" alt="App Logo" class="app-logo"> <!-- App Icon -->
-        <span class="app-title">Order Management - Personal Use</span>
+        <div class="header-content">
+            <img src="./assets/images/logo_d.ico" alt="App Logo" class="app-logo">
+            <span class="app-title">Order Management - Personal Use</span>
+        </div>
     </header>
 
-    <div class="container">
+    <div class="main-content">
         <div class="sidebar">
-            <h2 style="color: #FFD700;">App Overview</h2>
-            <p><strong>Order Management</strong> is designed for personal use, helping you to manage and track your orders from pickup to delivery. With a barcode scanner, you can easily scan items during pickup and delivery, ensuring the process is quick and efficient. The app allows you to see all order details and track the progress of each order.</p>
+            <h2 class="h2">App Overview</h2>
+            <div class="card">
+                <p><strong>Order Management</strong> is designed for personal use, helping you to manage and track your orders from pickup to delivery. With a barcode scanner, you can easily scan items during pickup and delivery, ensuring the process is quick and efficient. The app allows you to see all order details and track the progress of each order.</p>
+            </div>
         </div>
         
         <div class="content">
-            <h2 style="color: #FFD700;">Key Features</h2>
-            <ul>
-                <li><strong>Order Tracking:</strong> View all orders and their status at any time.</li>
-                <li><strong>Pickup Management:</strong> Track orders that need to be picked up for delivery.</li>
-                <li><strong>Picked Items Display:</strong> Once items are picked up, they are displayed as "picked".</li>
-                <li><strong>Barcode Scanner:</strong> Use the built-in barcode scanner to scan items for both pickup and delivery.</li>
-                <li><strong>Simple User Interface:</strong> Easy-to-use app with clear and organized details for efficient management.</li>
+            <h2 class="h2">Key Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Order Tracking:</h3>
+                        <p>View all orders and their status at any time.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Pickup Management:</h3>
+                        <p>Track orders that need to be picked up for delivery.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Picked Items Display:</h3>
+                        <p>Once items are picked up, they are displayed as "picked".</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Barcode Scanner:</h3>
+                        <p>Use the built-in barcode scanner to scan items for both pickup and delivery.</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-item-content">
+                        <h3 class="h4">Simple User Interface:</h3>
+                        <p>Easy-to-use app with clear and organized details for efficient management.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 
     <footer>© 2025 Order Management - Personal Use. All Rights Reserved.</footer>
 </div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <button class="nav-btn prev" onclick="changeImage(-1)">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+    </button>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Enlarged screenshot">
+    </div>
+    <button class="nav-btn next" onclick="changeImage(1)">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+    </button>
+</div>
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/lightbox.js"></script>
 
 </body>
 </html>
